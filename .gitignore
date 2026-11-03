@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Spec-Kit (the active feature pointer is local)
+.specify/feature.json
+
+# Editors
+.vscode/
+.idea/
+*.swp
