@@ -4,7 +4,19 @@ Guidance for Claude Code (and other AI agents) working in this repository. Keep 
 
 ## Mission
 
-*To be written.* The project has not been described yet. Start with `/speckit-constitution` to set its principles, then replace this section with: what the project is, who it is for, and what "done" means for its first release. Until then, ask the owner before assuming a domain, a language or a platform.
+**Reddit Conversation Curator**: a personal, self-contained browser extension that helps a reader find meaningful conversation in Reddit comment threads. The charter is [docs/charter.md](docs/charter.md) (concept baseline, 2026-11-03); it is the source of the vision, the boundaries and the first experiment until the constitution is written. **North Star:** reduce manipulation and repetition without stripping away the humanity of the discussion.
+
+- **First milestone:** a personal experimental extension, not a commercial Reddit client. One extension, one codebase (the "strategic monolith"), local inference, no separately installed AI service. Benchmark before adding infrastructure.
+- **Shape:** a Reddit page adapter (already-rendered comments and native controls only) → a conversation representation (stable identifiers) → a curator (scores) → a source-linked TL;DR that keeps material disagreement and minority views → a UI executor that applies recommended states through Reddit's native collapse/expand controls → an evaluation harness. The model recommends identifiers and states; deterministic code performs the permitted UI actions. No model-directed browser actions.
+- **First experiment:** about 100 already-loaded comments in one discussion, compared against unfiltered reading (memory, time to first result, relevance, missing counterarguments, false positives, preference).
+
+## Boundaries (from the charter; the constitution will carry them)
+
+- Never remove Reddit DOM nodes to hide comments, and never touch ads or promoted content. Use only positively identified native collapse/expand controls; otherwise do nothing.
+- Never post, vote, moderate or act for the user. No extra automated requests, crawling or account-history collection.
+- Inference stays local: no browsing data transmitted, no persistent user profiles.
+- Never claim to identify bots, propaganda, coordinated networks or intent with certainty. Judge conversational behavior, never agreement with an ideology: strong disagreement and sincere advocacy are not manipulation.
+- Do not assume the design complies with Reddit's terms: review the policies before implementation and before any distribution.
 
 ## Tone and claims policy
 
@@ -12,7 +24,7 @@ Stay neutral and technical. Never claim what has not been measured or verified; 
 
 ## Workflow: Spec-Driven Development (GitHub Spec-Kit)
 
-All features go through Spec-Kit. The project principles live in [.specify/memory/constitution.md](.specify/memory/constitution.md), and they override this file if the two ever conflict. The constitution is still the unfilled template: run `/speckit-constitution` first.
+All features go through Spec-Kit. The project principles live in [.specify/memory/constitution.md](.specify/memory/constitution.md), and they override this file if the two ever conflict. The constitution is still the unfilled template: run `/speckit-constitution` first, from [docs/charter.md](docs/charter.md).
 
 1. `/speckit-specify` → 2. `/speckit-clarify` → 3. `/speckit-plan` → 4. `/speckit-checklist` (optional) → 5. `/speckit-tasks` → 6. `/speckit-analyze` → 7. `/speckit-implement` → 8. `/speckit-converge`
 
@@ -38,4 +50,4 @@ All features go through Spec-Kit. The project principles live in [.specify/memor
 
 ## Current status
 
-- 2026-11-03: Repository bootstrapped from the rr-dr60-emu setup (Spec-Kit skills and scaffolding, the three helpers retargeted to be domain-generic, these conventions). The project itself is not described yet: next is `/speckit-constitution`.
+- 2026-11-03: Repository bootstrapped from the rr-dr60-emu setup (Spec-Kit skills and scaffolding, the three helpers retargeted to be domain-generic, these conventions). The owner's charter is in `docs/charter.md`. Next: `/speckit-constitution` from the charter, then the first spec (the ~100-comment experiment). The charter's open research questions (which tiny local models judge well enough in a browser, calibrating to keep dissent and humor, finding native controls across layouts, Reddit's policies, partial loading) are candidates for the first research tasks.
