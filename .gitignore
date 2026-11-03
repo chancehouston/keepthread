@@ -10,3 +10,7 @@
 .vscode/
 .idea/
 *.swp
+
+# Research: raw saved Reddit pages and full-text fixtures hold third-party content (docs/research/reddit-policy.md, risky behavior 1)
+docs/research/fixtures/raw/
+*.mhtml
