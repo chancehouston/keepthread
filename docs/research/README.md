@@ -15,7 +15,7 @@ This spike settles the charter's riskiest unknowns before the first spec, so tha
 | # | Question | Method | Output | Status |
 |---|---|---|---|---|
 | R1 | What do Reddit's current terms allow for this behavior (reading the rendered page, activating native collapse controls)? | Desk research: current policy text, dated | `reddit-policy.md` | Done: go with constraints for personal use |
-| R2 | Can comments, stable IDs, thread structure and native collapse controls be identified reliably, across layouts? | The owner saves thread pages manually (no automated requests); these are scrubbed into fixtures and their DOM is mapped | `page-adapter.md`, `fixtures/` | First pass done (5 threads, current layout); live-page check open |
+| R2 | Can comments, stable IDs, thread structure and native collapse controls be identified reliably, across layouts? | The owner saves thread pages manually (no automated requests); these are scrubbed into fixtures and their DOM is mapped | `page-adapter.md`, `fixtures/` | Done for the current layout (5 saved threads, 2 live checks); recommends setting `details.open`, not clicking |
 | R3 | Which in-browser runtimes and tiny models are realistic in Chrome, and what carries over to Firefox and Safari? | Desk research | `model-landscape.md` | Done: shortlist E1–E3, G1–G4, B0; probe design ready |
 | R4 | How do the shortlisted models perform on real threads? | A throwaway probe page that measures download size, memory, time to first result and total time | `benchmark-probe.md` | Needs R2 and R3 |
 | R5 | How are "meaningful", "repetition", "dissent preserved" and "humor" judged? | A draft rubric; the owner labels one ~100-comment thread before seeing model output | `evaluation-rubric.md`, a labeled fixture | Not started |
