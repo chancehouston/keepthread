@@ -50,6 +50,20 @@ All features go through Spec-Kit. The project principles live in [.specify/memor
 
 ## Current status
 
+### Bookmark: resume here (set 2026-11-03)
+
+Branch `research/feasibility`; PR [#1](https://github.com/chancehouston/keepthread/pull/1) is open into `main` (the owner merges). Public repo: https://github.com/chancehouston/keepthread.
+
+- **Done:** R1 Reddit policy (go with constraints), R2 page adapter (current layout; set `details.open`, never synthesize clicks), R3 model shortlist (E1–E3, G1–G4, B0) and the R4 probe design, R5 rubric draft.
+- **Waiting on the owner:**
+  1. Label `docs/research/fixtures/raw/pics/labels.csv` and fill in its `material-points.md` (local, gitignored; about an hour). Don't run models on that thread first.
+  2. Answer two R4 questions. Recommended defaults: (a) fetch model files once from Hugging Face at setup, then no network at all; (b) ~3 GB downloads are acceptable for the largest candidates.
+  3. Merge PR #1 when satisfied.
+- **Next for the agent:** build R4, the benchmark probe (a throwaway MV3 extension: offscreen document plus Worker; structural fixtures with synthetic text; embeddings first, then G1–G4 and B0; figures only from the probe's printed JSON). Then score against the owner's labels, write `docs/research/recommendation.md`, then `/speckit-constitution` (from the charter plus reddit-policy.md's seven principles), then the first spec.
+- **Later:** rename the local folder (`Conversation Curator` → `keepthread`), which moves the session memory path. Re-label 20 random comments, at least three days after the first labeling, for the rubric's reliability check.
+
+### Log
+
 - 2026-11-03: Repository bootstrapped from the rr-dr60-emu setup (Spec-Kit skills and scaffolding, the three helpers retargeted to be domain-generic, these conventions). The owner's charter is in `docs/charter.md`. Next: `/speckit-constitution` from the charter, then the first spec (the ~100-comment experiment). The charter's open research questions (which tiny local models judge well enough in a browser, calibrating to keep dissent and humor, finding native controls across layouts, Reddit's policies, partial loading) are candidates for the first research tasks.
 - 2026-11-03: **Renamed to Keepthread**: Reddit's terms bar its trademark in an app name (docs/research/reddit-policy.md C9). **MIT license.** The repository is to be published publicly on GitHub, so nothing private goes in: no raw saved pages and no third-party comment text (RD3).
 - 2026-11-03: **Research spike first** ([docs/research/README.md](docs/research/README.md)), on the `research/feasibility` branch. It is a documented exception to Spec-Kit, because it ships documents and throwaway probes, not product code. The constitution and the first spec follow it. **Chrome first**; Firefox and Safari are planned, so isolate Chrome-only APIs behind a seam.
