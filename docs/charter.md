@@ -1,6 +1,7 @@
-# Reddit Conversation Curator — Project Charter
+# Keepthread — Project Charter
 **Milestone:** Concept baseline · November 3, 2026  
-**Status:** Agreed direction, not yet implemented
+**Status:** Agreed direction, not yet implemented  
+**Name:** Keepthread (2026-11-03), formerly the working title "Reddit Conversation Curator". It was renamed because Reddit's terms bar its trademark in an app name.
 
 ## Vision
 A personal, self-contained browser extension that helps a reader find meaningful conversation in Reddit comment threads. Reduce repetition, spam-like behavior, apparent steering and manipulation while preserving humor, disagreement, personality, and the ability to inspect everything.

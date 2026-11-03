@@ -1,10 +1,10 @@
-# CLAUDE.md — Conversation Curator
+# CLAUDE.md — Keepthread
 
 Guidance for Claude Code (and other AI agents) working in this repository. Keep this file current. When a decision changes, update it here.
 
 ## Mission
 
-**Reddit Conversation Curator**: a personal, self-contained browser extension that helps a reader find meaningful conversation in Reddit comment threads. The charter is [docs/charter.md](docs/charter.md) (concept baseline, 2026-11-03); it is the source of the vision, the boundaries and the first experiment until the constitution is written. **North Star:** reduce manipulation and repetition without stripping away the humanity of the discussion.
+**Keepthread** (working title until 2026-11-03: "Reddit Conversation Curator"): a personal, self-contained browser extension that helps a reader find meaningful conversation in Reddit comment threads. The charter is [docs/charter.md](docs/charter.md) (concept baseline, 2026-11-03); it is the source of the vision, the boundaries and the first experiment until the constitution is written. **North Star:** reduce manipulation and repetition without stripping away the humanity of the discussion.
 
 - **First milestone:** a personal experimental extension, not a commercial Reddit client. One extension, one codebase (the "strategic monolith"), local inference, no separately installed AI service. Benchmark before adding infrastructure.
 - **Shape:** a Reddit page adapter (already-rendered comments and native controls only) → a conversation representation (stable identifiers) → a curator (scores) → a source-linked TL;DR that keeps material disagreement and minority views → a UI executor that applies recommended states through Reddit's native collapse/expand controls → an evaluation harness. The model recommends identifiers and states; deterministic code performs the permitted UI actions. No model-directed browser actions.
@@ -51,3 +51,6 @@ All features go through Spec-Kit. The project principles live in [.specify/memor
 ## Current status
 
 - 2026-11-03: Repository bootstrapped from the rr-dr60-emu setup (Spec-Kit skills and scaffolding, the three helpers retargeted to be domain-generic, these conventions). The owner's charter is in `docs/charter.md`. Next: `/speckit-constitution` from the charter, then the first spec (the ~100-comment experiment). The charter's open research questions (which tiny local models judge well enough in a browser, calibrating to keep dissent and humor, finding native controls across layouts, Reddit's policies, partial loading) are candidates for the first research tasks.
+- 2026-11-03: **Renamed to Keepthread**: Reddit's terms bar its trademark in an app name (docs/research/reddit-policy.md C9). **MIT license.** The repository is to be published publicly on GitHub, so nothing private goes in: no raw saved pages and no third-party comment text (RD3).
+- 2026-11-03: **Research spike first** ([docs/research/README.md](docs/research/README.md)), on the `research/feasibility` branch. It is a documented exception to Spec-Kit, because it ships documents and throwaway probes, not product code. The constitution and the first spec follow it. **Chrome first**; Firefox and Safari are planned, so isolate Chrome-only APIs behind a seam.
+- 2026-11-03: The three helpers now each have a "This project" section taken from the charter: the coach checks charter traceability, boundary FRs, operational definitions and claims wording; the technical reviewer covers adapter fragility, boundary-invariant tests, comments as untrusted input, local inference and evaluation validity; the product specialist is scoped to a personal milestone, Reddit policy and trademark, and the claims denylist.
