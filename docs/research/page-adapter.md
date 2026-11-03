@@ -1,10 +1,10 @@
 # R2: Finding comments, structure and native controls in Reddit's pages
 
-**Status:** first pass, 2026-11-03, from the saved pages only; one live-page check is still open (§5). The owner saved five threads, logged in, on the current Reddit layout, as both "Webpage, Complete" and "Webpage, Single File" (MHTML). They are kept outside the repository (RD3). The analysis scripts read the files as data and kept no comment text; only counts and markup structure appear below.
+**Status:** 2026-11-03. Saved-page analysis plus live check run 1; run 2 (analytics events) is open (§5). The owner saved five threads, logged in, on the current Reddit layout, as both "Webpage, Complete" and "Webpage, Single File" (MHTML). They are kept outside the repository (RD3). The analysis scripts read the files as data and kept no comment text; only counts and markup structure appear below.
 
 ## Verdict
 
-**The current layout looks adapter-friendly.** Every loaded comment is a `shreddit-comment` element with a stable ID, its depth and its parent's ID as attributes, and its collapse state is a native `<details open>` element. Toggling `<details>` is client-side by definition (whether Reddit's own listener sends a request is the open check in §5). "More replies" controls are distinct elements that send a POST, so the executor can exclude them by construction. Ad slots are siblings of comments, never their ancestors.
+**The current layout looks adapter-friendly.** Every loaded comment is a `shreddit-comment` element with a stable ID, its depth and its parent's ID as attributes, and its collapse state is a native `<details open>` element. Toggling it fetches no content; Reddit does log the toggle to its analytics endpoint (§5). "More replies" controls are distinct elements that send a POST, so the executor can exclude them by construction. Ad slots are siblings of comments, never their ancestors.
 
 **old.reddit was not sampled.** Given its restriction to recently active logged-in users (reddit-policy.md C14), the recommendation is to **support the current layout only** in the first experiment, and to have the adapter report "unsupported layout" anywhere else.
 
@@ -62,17 +62,29 @@ Word counts are whitespace-separated tokens of the comment body's text, links an
 
 Neither format captures `shreddit-comment`'s own shadow root. Whether the live comment also renders a separate collapse button there (for example in the thread line) is unknown from the saved pages, so the live check covers it.
 
-## 5. Open: the live-page check
+## 5. The live-page check
 
-Run once by the owner on a live thread, in Chrome DevTools: a short console snippet that reports structure only (no usernames or text), plus the Network tab while toggling.
+### Run 1 (2026-11-03, Chrome 156, r/SipsTea, logged in, [probes/live-check.js](probes/live-check.js))
 
-1. Does `shreddit-comment` have an open `shadowRoot`, and which buttons with which `aria-label` values does it contain? This answers whether the positively identified control is the `summary` or a button in the shadow root.
-2. Does toggling a comment through its native control send any network request (reddit-policy.md Q1)? Collapsing and expanding already-loaded children should not.
-3. Does a manual toggle change the `collapsed` attribute and `details[open]` together? The executor and the override detection both depend on that.
+| Question | Result |
+|---|---|
+| Does `shreddit-comment` have an open shadow root with its own controls? | **No.** 0 of 100 comments had an open `shadowRoot`. The control is the light-DOM `shreddit-comment > details > summary` |
+| Does the native toggle work? | **Yes.** `summary.click()` closed `details` and hid the replies; a second click restored both |
+| Does the `collapsed` attribute follow the toggle? | **No.** It stayed absent through both toggles, so it reflects only Reddit's initial, server-set state. **The state to read (for the executor and for detecting the reader's overrides) is `details.open`** |
+| Does toggling send network requests? | **One:** `fetch /svc/shreddit/events`, Reddit's analytics endpoint. No content was fetched, so collapse is client-side for content (reddit-policy.md Q1). It is not yet known whether the click caused the event or it was a periodic background report |
+
+### Run 2 (open): does the extension's toggling make Reddit send analytics events?
+
+If every summary click sends an event, an executor that collapses, say, 60 comments makes Reddit's own code send about 60 requests, which conflicts with reddit-policy.md constraint 1 ("no requests on Reddit's behalf"). [probes/live-check-2.js](probes/live-check-2.js) compares four things: an idle window, summary clicks, and setting `details.open` directly (the native element's state, without Reddit's click handler). It counts the analytics requests and other requests in each window, and checks that the replies are hidden and shown either way.
+
+Choosing between the two toggle mechanisms is a decision for the first spec; Run 2 supplies the evidence:
+
+- **Clicking `summary`:** exactly what a reader's click does, including Reddit's analytics.
+- **Setting `details.open`:** native element state with no click event. It may make no request, but it bypasses whatever else Reddit's handler does.
 
 ## 6. Recommendations for the first spec
 
 - **Supported layout:** the current Reddit layout only. Positive identification is the exact tags and attributes above, and all of them must be present; otherwise the adapter does nothing.
-- **The executor's allowlist:** the native toggle of `shreddit-comment > details` (the control the live check confirms), and nothing else. Explicitly excluded: `faceplate-partial`, `shreddit-comment-tree-ad`, and every vote, award, share, reply and menu button.
+- **The executor's allowlist:** the native toggle of `shreddit-comment > details` (confirmed by the live check; the mechanism, a click or `details.open`, depends on Run 2), and nothing else. Its state is read from `details.open`, never from the `collapsed` attribute. Explicitly excluded: `faceplate-partial`, `shreddit-comment-tree-ad`, and every vote, award, share, reply and menu button.
 - **Disclosure:** "analyzed N of M", with N the loaded `shreddit-comment` count and M the post's `comment-count`.
 - **Fixtures:** generated from the "Webpage, Complete" saves by a scrubber that keeps the tags, attributes and tree shape, replaces text with synthetic text of the same word count, and removes the personal data listed in §2. A test asserts that no username or original sentence survives.
