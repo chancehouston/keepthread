@@ -52,14 +52,14 @@ All features go through Spec-Kit. The project principles live in [.specify/memor
 
 ### Bookmark: resume here (set 2026-11-03)
 
-Branch `research/feasibility`; PR [#1](https://github.com/chancehouston/keepthread/pull/1) is open into `main` (the owner merges). Public repo: https://github.com/chancehouston/keepthread.
+PR [#1](https://github.com/chancehouston/keepthread/pull/1) (R1–R3, R5 draft) was merged into `main` on 2026-11-03. R4 work goes on the `research/r4-benchmark` branch. Public repo: https://github.com/chancehouston/keepthread.
 
 - **Done:** R1 Reddit policy (go with constraints), R2 page adapter (current layout; set `details.open`, never synthesize clicks), R3 model shortlist (E1–E3, G1–G4, B0) and the R4 probe design, R5 rubric draft.
 - **Waiting on the owner:**
   1. Label `docs/research/fixtures/raw/pics/labels.csv` and fill in its `material-points.md` (local, gitignored; about an hour). Don't run models on that thread first.
-  2. Answer two R4 questions. Recommended defaults: (a) fetch model files once from Hugging Face at setup, then no network at all; (b) ~3 GB downloads are acceptable for the largest candidates.
-  3. Merge PR #1 when satisfied.
-- **Next for the agent:** build R4, the benchmark probe (a throwaway MV3 extension: offscreen document plus Worker; structural fixtures with synthetic text; embeddings first, then G1–G4 and B0; figures only from the probe's printed JSON). Then score against the owner's labels, write `docs/research/recommendation.md`, then `/speckit-constitution` (from the charter plus reddit-policy.md's seven principles), then the first spec.
+  2. Load the R4 probe (`docs/research/probes/r4/ext`, unpacked) and paste its JSON: steps in docs/research/benchmark-probe.md "How to run it".
+- **R4 decisions (owner, 2026-11-03):** fetch model files once from Hugging Face at setup, then no network (R4-D1); ~3 GB downloads are acceptable (R4-D2). Stage 1 (embeddings E1–E3) run 1 is recorded in benchmark-probe.md (20 of 28 jobs; E3-webgpu-fp32 unfinished; the Chrome crashes are diagnosed: reading a packaged `chrome-extension://` file over ~1 GB crashes Chrome 156's browser process, streamed or buffered, so models must load from OPFS/Cache Storage or stay under ~1 GB per file). Next: stage 2 with an OPFS model store, tested first on a >1 GB read.
+- **Next for the agent:** record stage 1's figures from the owner's JSON; add memory sampling; build stage 2 (G1–G4 on Transformers.js/WebLLM/wllama, and B0). Then score against the owner's labels, write `docs/research/recommendation.md`, then `/speckit-constitution` (from the charter plus reddit-policy.md's seven principles), then the first spec.
 - **Later:** rename the local folder (`Conversation Curator` → `keepthread`), which moves the session memory path. Re-label 20 random comments, at least three days after the first labeling, for the rubric's reliability check.
 
 ### Log

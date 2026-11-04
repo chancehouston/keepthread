@@ -14,3 +14,10 @@
 # Research: raw saved Reddit pages and full-text fixtures hold third-party content (docs/research/reddit-policy.md, risky behavior 1)
 docs/research/fixtures/raw/
 *.mhtml
+
+# R4 probe build output and downloaded model files (local only)
+docs/research/probes/r4/node_modules/
+docs/research/probes/r4/ext/
+__pycache__/
+# Local crash reports (machine identifiers)
+docs/crash-report/

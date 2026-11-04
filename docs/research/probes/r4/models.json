@@ -1,0 +1,24 @@
+{
+  "_comment": "Pinned model files for the R4 probe. setup-models.mjs fetches them once from Hugging Face into ext/models/ (gitignored) and checks sizes and SHA-256; the extension itself never uses the network. Revisions checked 2026-11-03.",
+  "models": [
+    {
+      "key": "E1",
+      "repo": "Xenova/all-MiniLM-L6-v2",
+      "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+      "files": ["config.json", "tokenizer.json", "tokenizer_config.json", "special_tokens_map.json", "onnx/model.onnx", "onnx/model_quantized.onnx"]
+    },
+    {
+      "key": "E2",
+      "repo": "Xenova/bge-small-en-v1.5",
+      "revision": "ea104dacec62c0de699686887e3f920caeb4f3e3",
+      "files": ["config.json", "tokenizer.json", "tokenizer_config.json", "special_tokens_map.json", "onnx/model.onnx", "onnx/model_quantized.onnx"]
+    },
+    {
+      "key": "E3",
+      "repo": "onnx-community/embeddinggemma-2-ONNX",
+      "revision": "daa72c51243991dfcaf9f9137d2c573d8f7790c0",
+      "files": ["config.json", "config_sentence_transformers.json", "tokenizer.json", "tokenizer_config.json", "onnx/model_q4.onnx", "onnx/model_q4.onnx_data", "onnx/model.onnx", "onnx/model.onnx_data"],
+      "textOnlyConfig": "Removes vision_config and audio_config from the local config.json, so Transformers.js 4.3.2 loads only the text model (its MultimodalEncoder loads an encoder only when the config has that section)."
+    }
+  ]
+}

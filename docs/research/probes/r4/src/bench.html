@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Keepthread R4 bench</title>
+<style>
+  body { font: 14px/1.4 system-ui, sans-serif; margin: 1.5rem; max-width: 60rem; }
+  fieldset { margin: 0 0 1rem; }
+  label { display: inline-block; margin: 0 1rem 0.3rem 0; }
+  pre { background: #f4f4f4; padding: 0.75rem; max-height: 28rem; overflow: auto; font-size: 12px; }
+  #status { font-weight: 600; }
+  @media (prefers-color-scheme: dark) { body { background: #1b1b1b; color: #ddd; } pre { background: #262626; } }
+</style>
+<h1>Keepthread R4 bench (throwaway probe)</h1>
+<p>Runs each checked configuration on each checked fixture, one at a time, each in a fresh Worker inside the offscreen document.
+Close other heavy apps, stay on AC power, and leave this tab in front while it runs.</p>
+<fieldset id="configs"><legend>Configurations</legend></fieldset>
+<fieldset id="fixtures"><legend>Fixtures</legend></fieldset>
+<p>
+  <button id="env">1. Check contexts</button>
+  <button id="run">2. Run checked</button>
+  <button id="download">Download JSON</button>
+  <button id="copy">Copy JSON</button>
+  <button id="reset">Clear saved results</button>
+  <span id="status">idle</span>
+</p>
+<pre id="out">{}</pre>
+<script type="module" src="bench.js"></script>
+</html>

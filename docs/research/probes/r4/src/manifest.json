@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Keepthread R4 probe (throwaway)",
+  "version": "0.0.1",
+  "description": "R4 benchmark probe for Keepthread's research spike. Runs local models on packaged fixtures; no network, no Reddit pages.",
+  "minimum_chrome_version": "124",
+  "permissions": ["offscreen", "storage"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "Open the R4 bench" },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self'"
+  },
+  "cross_origin_embedder_policy": { "value": "require-corp" },
+  "cross_origin_opener_policy": { "value": "same-origin" }
+}

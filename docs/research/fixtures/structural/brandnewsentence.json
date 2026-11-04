@@ -1,0 +1,539 @@
+{
+ "fixture": "brandnewsentence",
+ "loaded": 53,
+ "total": 63,
+ "source": "R2 saved page",
+ "text": "synthetic",
+ "comments": [
+  {
+   "id": "c001",
+   "parent": null,
+   "depth": 0,
+   "type": "image",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 19,
+   "text": "use not is at go new small an form play just earth with many of are down been also"
+  },
+  {
+   "id": "c002",
+   "parent": "c001",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 28,
+   "text": "first set big come play house to air low mother us that form spell north let say live right port to kind tell on name time now and"
+  },
+  {
+   "id": "c003",
+   "parent": "c002",
+   "depth": 2,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 7,
+   "text": "all want was in own any father"
+  },
+  {
+   "id": "c004",
+   "parent": "c003",
+   "depth": 3,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 41,
+   "text": "answer thought it for start follow anyway old add it study use line big round literally new one work boy draw are had animal does picture earth right give look own every this water off the three under me study work"
+  },
+  {
+   "id": "c005",
+   "parent": "c004",
+   "depth": 4,
+   "type": "giphy",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 0,
+   "text": ""
+  },
+  {
+   "id": "c006",
+   "parent": "c004",
+   "depth": 4,
+   "type": "giphy",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 0,
+   "text": ""
+  },
+  {
+   "id": "c007",
+   "parent": "c002",
+   "depth": 2,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 9,
+   "text": "actually from form turn small him not land late"
+  },
+  {
+   "id": "c008",
+   "parent": null,
+   "depth": 0,
+   "type": "giphy",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 0,
+   "text": ""
+  },
+  {
+   "id": "c009",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 17,
+   "text": "should old mother right life in new with far help again change show late about no find"
+  },
+  {
+   "id": "c010",
+   "parent": "c009",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 11,
+   "text": "add home write me form sentence but house place tell man"
+  },
+  {
+   "id": "c011",
+   "parent": "c010",
+   "depth": 2,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 13,
+   "text": "grow and make ask let does tell low only her who life animal"
+  },
+  {
+   "id": "c012",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 5,
+   "text": "day way were round this"
+  },
+  {
+   "id": "c013",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 27,
+   "text": "high literally she round will same place how follow each cross keep even every new do well some so try read try give much build work make"
+  },
+  {
+   "id": "c014",
+   "parent": "c013",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 19,
+   "text": "cause us no great where with earth with tree boy me but long sound between big food kind they"
+  },
+  {
+   "id": "c015",
+   "parent": "c014",
+   "depth": 2,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 15,
+   "text": "plant many name work man were some came us only where by in be are"
+  },
+  {
+   "id": "c016",
+   "parent": "c013",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 34,
+   "text": "end might two name follow by them under get every run long while had now between sea very four sea that farm literally and self so story live grow over probably and father place"
+  },
+  {
+   "id": "c017",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 8,
+   "text": "us far there honestly study literally may them"
+  },
+  {
+   "id": "c018",
+   "parent": "c017",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 4,
+   "text": "these house house build"
+  },
+  {
+   "id": "c019",
+   "parent": "c017",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 10,
+   "text": "to have actually name then want learn as their port"
+  },
+  {
+   "id": "c020",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 4,
+   "text": "they mother make head"
+  },
+  {
+   "id": "c021",
+   "parent": "c020",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 5,
+   "text": "point hard use make have"
+  },
+  {
+   "id": "c022",
+   "parent": "c021",
+   "depth": 2,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 65,
+   "text": "not other father end about man literally literally three like should build let down ask change great under would go build was how get everyone round back over by these real low hand mother house same their answer find everyone any tell sea real basically look air help far real same form we be through actually make just made there me most your ask an"
+  },
+  {
+   "id": "c023",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 35,
+   "text": "do also again but than grow saw even had ask put way follow off sound head night form men are thing over now hand four few boy thing page cross me can add all story"
+  },
+  {
+   "id": "c024",
+   "parent": "c023",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 9,
+   "text": "close mother three anyway literally house three by see"
+  },
+  {
+   "id": "c025",
+   "parent": "c024",
+   "depth": 2,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 10,
+   "text": "number light she before write many much again live in"
+  },
+  {
+   "id": "c026",
+   "parent": "c025",
+   "depth": 3,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 2,
+   "text": "eye had"
+  },
+  {
+   "id": "c027",
+   "parent": "c024",
+   "depth": 2,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 15,
+   "text": "very our some time after low little school let cross so this learn not should"
+  },
+  {
+   "id": "c028",
+   "parent": "c024",
+   "depth": 2,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 18,
+   "text": "answer do with set mean part old first end city get follow cross which then under then where"
+  },
+  {
+   "id": "c029",
+   "parent": "c028",
+   "depth": 3,
+   "type": "giphy",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 0,
+   "text": ""
+  },
+  {
+   "id": "c030",
+   "parent": "c023",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 11,
+   "text": "there name last run read draw form by have farm basically"
+  },
+  {
+   "id": "c031",
+   "parent": "c030",
+   "depth": 2,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 19,
+   "text": "were other anyway night well late sentence port like may air our up state near left three point self"
+  },
+  {
+   "id": "c032",
+   "parent": "c023",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": true,
+   "words": 8,
+   "text": "draw stand them few literally us come head"
+  },
+  {
+   "id": "c033",
+   "parent": null,
+   "depth": 0,
+   "type": "giphy",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 10,
+   "text": "of north act from are too and has differ run"
+  },
+  {
+   "id": "c034",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 6,
+   "text": "have like out somebody way ask"
+  },
+  {
+   "id": "c035",
+   "parent": "c034",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 4,
+   "text": "said land one out"
+  },
+  {
+   "id": "c036",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 8,
+   "text": "we sound end must late picture now think"
+  },
+  {
+   "id": "c037",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 11,
+   "text": "they down very only come for round cross light life self"
+  },
+  {
+   "id": "c038",
+   "parent": "c037",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 22,
+   "text": "school well this now answer part it could look north picture food even name give two answer thought great to let left"
+  },
+  {
+   "id": "c039",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 6,
+   "text": "not to through well only turn"
+  },
+  {
+   "id": "c040",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 2,
+   "text": "sea thing"
+  },
+  {
+   "id": "c041",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 3,
+   "text": "differ life how"
+  },
+  {
+   "id": "c042",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 1,
+   "text": "play"
+  },
+  {
+   "id": "c043",
+   "parent": null,
+   "depth": 0,
+   "type": "giphy",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 0,
+   "text": ""
+  },
+  {
+   "id": "c044",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 8,
+   "text": "so when man of thought just might stand"
+  },
+  {
+   "id": "c045",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 1,
+   "text": "school"
+  },
+  {
+   "id": "c046",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 26,
+   "text": "find high then we not some also we port tell end might but everyone over country look light our try each her again this than get"
+  },
+  {
+   "id": "c047",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 15,
+   "text": "other each start form country about near sea men made learn had down name day"
+  },
+  {
+   "id": "c048",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 36,
+   "text": "turn new any them farm never country we can mean hand thing all do very say life learn may do year last sea why name story be work day follow air very country like was your"
+  },
+  {
+   "id": "c049",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 3,
+   "text": "two own was"
+  },
+  {
+   "id": "c050",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 2,
+   "text": "water never"
+  },
+  {
+   "id": "c051",
+   "parent": "c050",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 13,
+   "text": "hard think line no literally turn keep try animal year about for put"
+  },
+  {
+   "id": "c052",
+   "parent": null,
+   "depth": 0,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": true,
+   "words": 0,
+   "text": ""
+  },
+  {
+   "id": "c053",
+   "parent": "c052",
+   "depth": 1,
+   "type": "text",
+   "deleted": false,
+   "redditCollapsed": false,
+   "words": 21,
+   "text": "move the so side sound far make help at want out why change tell work run tell them said house everyone"
+  }
+ ]
+}

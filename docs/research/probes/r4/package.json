@@ -1,0 +1,18 @@
+{
+  "name": "keepthread-r4-probe",
+  "private": true,
+  "version": "0.0.0",
+  "description": "R4 throwaway benchmark probe (docs/research/benchmark-probe.md). Not product code.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "setup-models": "node setup-models.mjs",
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}
